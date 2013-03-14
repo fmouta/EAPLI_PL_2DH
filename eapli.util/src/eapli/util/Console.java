@@ -50,17 +50,13 @@ public class Console {
 
     static public boolean readBoolean(String prompt) {
         do {
-            try {
                 String strBool = readLine(prompt).toLowerCase();
 
-                if (strBool.equals("s") || strBool.equals("y")) {
+                if (strBool.equals("s") || strBool.equals("sim") || strBool.equals("y") || strBool.equals("yes")) {
                     return true;
-                } else if (strBool.equals("n")) {
+                } else if (strBool.equals("n") || strBool.equals("no") || strBool.equals("nao")) {
                     return false;
                 }
-            } catch (NumberFormatException ex) {
-     Logger.getLogger(Console.class.getName()).log(Level.SEVERE, null, ex);
-            }
         } while (true);
     }
 
