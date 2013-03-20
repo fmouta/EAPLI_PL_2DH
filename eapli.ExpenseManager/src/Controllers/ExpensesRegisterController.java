@@ -13,7 +13,6 @@ import Model.Expense;
 import java.math.BigDecimal;
 import java.util.Date;
 import Persistence.*;
-import eapli.bootstrap.ExpensesBootstrapper;
 /**
  *
  * @author Paulo Gandra Sousa
@@ -24,7 +23,6 @@ public class ExpensesRegisterController {
     }
 
     public void registerExpense(String what, Date date, BigDecimal amount) {
-        ExpensesBootstrapper e = new ExpensesBootstrapper();
         Expense expense = new Expense( what, date, amount);
         IExpensesRepository repo = new ExpensesRepository();
         repo.save(expense);

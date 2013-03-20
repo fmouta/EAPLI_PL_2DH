@@ -40,6 +40,11 @@ public class Expense {
         this( description, DateTime.newDate(year, month, day), amount);
     }
     
+    public Expense(Expense exp) {
+        this.description = exp.description;
+        this.amount = exp.amount;
+    }
+    
     public BigDecimal getAmount() {
         return amount;
     }
