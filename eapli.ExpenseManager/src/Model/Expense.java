@@ -48,6 +48,10 @@ public class Expense {
     public BigDecimal getAmount() {
         return amount;
     }
+    
+    public String getDescription() {
+        return description;
+    }
 
    
 }

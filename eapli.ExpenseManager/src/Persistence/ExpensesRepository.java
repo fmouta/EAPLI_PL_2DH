@@ -6,15 +6,11 @@ package Persistence;
  */
  
 import Model.Expense;
-import Model.*;
-import Model.Expense;
-import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
-/**
- *
- * @author losa
- */
+
+
 public class ExpensesRepository  implements IExpensesRepository
 {
     // class member
@@ -25,15 +21,21 @@ public class ExpensesRepository  implements IExpensesRepository
     public void save(Expense exp)
     {
         if (exp==null) throw new IllegalArgumentException();
-        listExpense.add(exp);
-        Expense expense = listExpense.get(listExpense.size() -1);  
+        listExpense.add(exp);  
     }    
     
     public Expense getLastExpense()
     {
+        Expense ret = null;
         Expense expense = null;
-        if (listExpense.size() > 0) 
-            expense = listExpense.get(listExpense.size() -1);
-        return expense;
+        int size = listExpense.size();
+        if (size > 0) expense = listExpense.get(size -1);
+        if (expense != null) ret = new Expense(expense);
+        return ret;
+    }    
+    
+    public List<Expense> getAllExpenses()
+    {
+        return Collections.unmodifiableList(listExpense);
     }
 }
