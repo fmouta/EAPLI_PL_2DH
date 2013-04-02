@@ -19,7 +19,7 @@ import java.util.Date;
 public class Expense {
     
     String description;
-   
+    Date date;
     BigDecimal amount;
     
     protected Expense() {}
@@ -34,6 +34,7 @@ public class Expense {
         }
         this.description = description;
         this.amount = amount;
+        this.date = dateOccurred;
     }
     
     public Expense( String description, int year, int month, int day, BigDecimal amount) {
@@ -43,6 +44,11 @@ public class Expense {
     public Expense(Expense exp) {
         this.description = exp.description;
         this.amount = exp.amount;
+        this.date = exp.date;
+    }
+    
+    public Date getDate() {
+        return date;
     }
     
     public BigDecimal getAmount() {
