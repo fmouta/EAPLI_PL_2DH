@@ -18,6 +18,7 @@ import java.util.Date;
  * @author Paulo Gandra Sousa
  */
 class ExpenseRegisterUI {
+    
     public void mainLoop() {
         System.out.println("* * *  REGISTER AN EXPENSE  * * *\n");
         
@@ -30,5 +31,8 @@ class ExpenseRegisterUI {
         controller.registerExpense(what, date, amount);
         
         System.out.println("expense recorded.");
+    }
+    public void Create(){
+        
     }
 }
