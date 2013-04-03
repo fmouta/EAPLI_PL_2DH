@@ -28,4 +28,8 @@ public class ExpensesController {
         return repo.getAllExpenses();
     }
     
+    public void definePaymentType() {
+        
+    }
+    
 }
