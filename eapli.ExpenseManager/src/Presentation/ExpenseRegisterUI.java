@@ -8,6 +8,7 @@ package Presentation;
 
 import Controllers.ExpensesRegisterController;
 import Controllers.ExpensesRegisterController;
+import Model.ExpenseType;
 
 import eapli.util.Console;
 import java.math.BigDecimal;
@@ -22,7 +23,7 @@ class ExpenseRegisterUI {
     public void mainLoop() {
         System.out.println("* * *  REGISTER AN EXPENSE  * * *\n");
         
-        String what = Console.readLine("Description:");
+        ExpenseType what = new ExpenseType(Console.readLine("Description:"));
         Date date = Console.readDate("When:");
         double value = Console.readDouble("Amount:");
         BigDecimal amount = new BigDecimal(value);

@@ -6,6 +6,7 @@ package Controllers;
  */
  
 import Model.Expense;
+import Model.ExpenseType;
 import java.math.BigDecimal;
 import java.util.Date;
 import Persistence.*;
@@ -18,7 +19,7 @@ public class ExpensesRegisterController {
     public ExpensesRegisterController() {
     }
 
-    public void registerExpense(String what, Date date, BigDecimal amount) {
+    public void registerExpense(ExpenseType what, Date date, BigDecimal amount) {
         Expense expense = new Expense( what, date, amount);
         IExpensesRepository repo = new ExpensesRepository();
         repo.save(expense);
