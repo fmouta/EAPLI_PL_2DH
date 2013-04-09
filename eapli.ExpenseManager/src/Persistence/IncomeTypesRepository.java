@@ -1,24 +1,32 @@
+package Persistence;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package Persistence;
-
+ 
 import Model.IncomeType;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-/**
- *
- * @author i110422
- */
-public class IncomeTypesRepository 
+
+public class IncomeTypesRepository  implements IIncomeTypesRepository
 {
-    private static List<IncomeType> listIncomeTypes = new ArrayList<IncomeType>();
-    public void save(IncomeType type)
+    // class member
+    private static List<IncomeType> listIncomeType= new ArrayList<IncomeType>();
+
+    public IncomeTypesRepository() {}
+    
+    public void save(IncomeType exp)
     {
-        if(type == null)
-            throw new IllegalArgumentException();
-        listIncomeTypes.add(type);
+        if (exp==null) throw new IllegalArgumentException();
+        listIncomeType.add(exp);  
+    }          
+    
+    public List<IncomeType> getAllIncomeTypes()
+    {
+        return Collections.unmodifiableList(listIncomeType);
     }
 }
+
