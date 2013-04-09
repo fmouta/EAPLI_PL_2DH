@@ -8,6 +8,7 @@ package Presentation;
 import Controllers.ExpensesController;
 
 import Model.Expense;
+import Model.ExpenseType;
 import java.math.BigDecimal;
 
 /**
@@ -22,11 +23,11 @@ class ExpensesUI {
         Expense exp = controller.getLastExpense();
         if (exp != null) {
             BigDecimal amount = exp.getAmount();
-            String description = exp.getDescription();
+            ExpenseType expenseType = exp.getDescription();
             
             System.out.println("Last Expense:");
             System.out.println("\tAmount = " + amount);
-            System.out.println("\tDescription = " + description);
+            System.out.println("\tDescription = " + expenseType);
         } else {
             System.out.println("There are no expenses.");
         }

@@ -1,26 +1,21 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package Controllers;
 
 import Model.IncomeType;
 import Persistence.IIncomeTypesRepository;
-
+import Persistence.IncomeTypesRepository;
+import java.util.List;
 /**
  *
- * @author i110422
+ * @author 1110422
  */
-public class IncomeTypeController 
-{
-    public void registerIncomeType(String desc)
-    {
-        IncomeType incType = new IncomeType(desc);
-        /* IIncomeTypesRepository repo = new IIncomeTypesRepository(); 
-        repo.save(incType); 
-        
-        COMPLETAR ISTO
-        * 
-        */
+public class IncomeTypeController {
+
+    public IncomeTypeController() {
     }
+   
+    public List<IncomeType> getAllIncomeTypes() {
+        IIncomeTypesRepository repo = new IncomeTypesRepository();
+        return repo.getAllIncomeTypes();
+    }
+    
 }

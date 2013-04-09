@@ -18,31 +18,31 @@ import java.util.Date;
 
 public class Expense {
     
-    String description;
+    ExpenseType expenseType;
     Date date;
     BigDecimal amount;
     
     protected Expense() {}
     
-    public Expense( String description, Date dateOccurred, BigDecimal amount) {
-        if (description == null || dateOccurred == null || amount == null) {
+    public Expense( ExpenseType expenseType, Date dateOccurred, BigDecimal amount) {
+        if (expenseType == null || dateOccurred == null || amount == null) {
             throw new IllegalArgumentException();
         }
         // cannot record a negative expense or a zero EUR expense
         if (amount.signum() == -1 || amount.signum() ==  0) {
             throw new IllegalArgumentException();
         }
-        this.description = description;
+        this.expenseType = expenseType;
         this.amount = amount;
         this.date = dateOccurred;
     }
     
-    public Expense( String description, int year, int month, int day, BigDecimal amount) {
-        this( description, DateTime.newDate(year, month, day), amount);
+    public Expense( ExpenseType expenseType, int year, int month, int day, BigDecimal amount) {
+        this( expenseType, DateTime.newDate(year, month, day), amount);
     }
     
     public Expense(Expense exp) {
-        this.description = exp.description;
+        this.expenseType = exp.expenseType;
         this.amount = exp.amount;
         this.date = exp.date;
     }
@@ -55,8 +55,8 @@ public class Expense {
         return amount;
     }
     
-    public String getDescription() {
-        return description;
+    public ExpenseType getDescription() {
+        return expenseType;
     }
 
    

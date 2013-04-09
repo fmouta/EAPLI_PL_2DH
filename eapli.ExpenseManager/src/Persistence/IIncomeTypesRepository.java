@@ -1,18 +1,12 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package Persistence;
-
+ 
 import Model.IncomeType;
 import java.util.List;
-
 /**
  *
- * @author i110422
+ * @author 1110422
  */
-public interface IIncomeTypesRepository 
-{
-    public void save(IncomeType type);
-    public List<IncomeType> getAllIncomeTypes();
+public interface IIncomeTypesRepository {
+    void save(IncomeType exp);
+    List<IncomeType> getAllIncomeTypes();        
 }
