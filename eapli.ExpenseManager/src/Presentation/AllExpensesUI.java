@@ -8,6 +8,7 @@ package Presentation;
 import Controllers.ExpensesController;
 
 import Model.Expense;
+import Model.ExpenseType;
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -23,11 +24,11 @@ class AllExpensesUI {
         List<Expense> list = controller.getAllExpenses();
         for (Expense exp: list) {
             BigDecimal amount = exp.getAmount();
-            String description = exp.getDescription();
+            ExpenseType expenseType = exp.getDescription();
             
             System.out.println("Expense:");
             System.out.println("\tAmount = " + amount);
-            System.out.println("\tDescription = " + description);
+            System.out.println("\tDescription = " + expenseType);
         }   
     }
 }
