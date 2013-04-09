@@ -6,20 +6,25 @@ package Model;
 
 /**
  *
- * @author Paulo Jorge
+ * @author 1111314, 1111407
  */
-public class Check {
+public class Check extends PaymentType {
     
-    private int value, number;
+    private int value;
 
     public Check() {
+        super();
         value = 0;
-        number = 0;
     }
 
     public Check(int value, int number) {
+        super(number);
         this.value = value;
-        this.number = number;
+    }
+    
+    public boolean payExpenses(int mt) {
+        value = 0;
+        return true;
     }
     
 }

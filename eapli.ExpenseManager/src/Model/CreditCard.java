@@ -6,33 +6,31 @@ package Model;
 
 /**
  *
- * @author Paulo Jorge
+ * @author 1111314, 1111407
  */
-public class CreditCard {
-    
-    private int number, limit, value;
+public class CreditCard extends PaymentType {
+
+    private int limit, value;
 
     public CreditCard() {
-        number = 0;
+        super();
         limit = 0;
         value = 0;
     }
 
     public CreditCard(int number, int limit, int value) {
-        this.number = number;
+        super(number);
         this.limit = limit;
         this.value = value;
     }
 
-    public boolean addToValue(int new_value) {
-        if((this.value + new_value)> limit) { 
+    @Override
+    public boolean payExpenses(int new_value) {
+        if ((this.value + new_value) > limit) {
             return false;
         } else {
             this.value += new_value;
         }
         return true;
     }
-    
-    
-    
 }
