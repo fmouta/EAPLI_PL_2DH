@@ -10,6 +10,7 @@ import Model.ExpenseType;
 import java.math.BigDecimal;
 import java.util.Date;
 import Persistence.*;
+import java.util.Calendar;
 /**
  *
  * @author Paulo Gandra Sousa
@@ -19,7 +20,7 @@ public class ExpensesRegisterController {
     public ExpensesRegisterController() {
     }
 
-    public void registerExpense(ExpenseType what, Date date, BigDecimal amount) {
+    public void registerExpense(ExpenseType what, Calendar date, BigDecimal amount) {
         Expense expense = new Expense( what, date, amount);
         IExpensesRepository repo = new ExpensesRepository();
         repo.save(expense);

@@ -12,6 +12,7 @@ import Model.ExpenseType;
 
 import eapli.util.Console;
 import java.math.BigDecimal;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -24,7 +25,7 @@ class ExpenseRegisterUI {
         System.out.println("* * *  REGISTER AN EXPENSE  * * *\n");
         
         ExpenseType what = new ExpenseType(Console.readLine("Description:"));
-        Date date = Console.readDate("When:");
+        Calendar date = Console.readDate("When:");
         double value = Console.readDouble("Amount:");
         BigDecimal amount = new BigDecimal(value);
         

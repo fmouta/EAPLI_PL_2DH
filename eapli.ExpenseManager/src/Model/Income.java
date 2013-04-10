@@ -6,6 +6,7 @@ package Model;
 
 import eapli.util.DateTime;
 import java.math.BigDecimal;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -16,14 +17,14 @@ import java.util.Date;
 public class Income 
 {
     IncomeType description; 
-    Date date;
+    Calendar date;
     BigDecimal amount;
     
     protected Income() 
     {        
     } 
     
-    public Income(IncomeType description, Date date, BigDecimal amount)
+    public Income(IncomeType description, Calendar date, BigDecimal amount)
     {        
         if (description == null || date == null || amount == null) 
         {
@@ -41,7 +42,7 @@ public class Income
     
      public Income( IncomeType description, int year, int month, int day, BigDecimal amount) 
      {
-        this( description, DateTime.newDate(year, month, day), amount);
+        this( description, DateTime.newCalendarDate(year, month, day), amount);
     }
     
     public Income(Income exp) 
@@ -51,7 +52,7 @@ public class Income
         this.date = exp.date;
     }  
     
-     public Date getDate() {
+     public Calendar getDate() {
         return date;
     }
     
