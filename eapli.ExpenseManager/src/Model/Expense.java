@@ -8,6 +8,7 @@ package Model;
 
 import eapli.util.DateTime;
 import java.math.BigDecimal;
+import java.util.Calendar;
 import java.util.Date;
 
 
@@ -19,12 +20,12 @@ import java.util.Date;
 public class Expense {
     
     ExpenseType expenseType;
-    Date date;
+    Calendar date;
     BigDecimal amount;
     
     protected Expense() {}
     
-    public Expense( ExpenseType expenseType, Date dateOccurred, BigDecimal amount) {
+    public Expense( ExpenseType expenseType, Calendar dateOccurred, BigDecimal amount) {
         if (expenseType == null || dateOccurred == null || amount == null) {
             throw new IllegalArgumentException();
         }
@@ -38,7 +39,7 @@ public class Expense {
     }
     
     public Expense( ExpenseType expenseType, int year, int month, int day, BigDecimal amount) {
-        this( expenseType, DateTime.newDate(year, month, day), amount);
+        this( expenseType, DateTime.newCalendarDate(year, month, day), amount);
     }
     
     public Expense(Expense exp) {
@@ -47,7 +48,7 @@ public class Expense {
         this.date = exp.date;
     }
     
-    public Date getDate() {
+    public Calendar getDate() {
         return date;
     }
     

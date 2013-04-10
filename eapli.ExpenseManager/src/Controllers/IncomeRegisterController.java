@@ -9,13 +9,14 @@ import Model.IncomeType;
 import java.math.BigDecimal;
 import java.util.Date;
 import Persistence.*;
+import java.util.Calendar;
 
 public class IncomeRegisterController {
 
     public IncomeRegisterController() {
     }
 
-    public void registerIncome(IncomeType what, Date date, BigDecimal amount) {
+    public void registerIncome(IncomeType what, Calendar date, BigDecimal amount) {
         Income income = new Income(what, date, amount);
         IIncomeRepository repo = new IncomeRepository();
         repo.save(income);

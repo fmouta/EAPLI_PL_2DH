@@ -8,6 +8,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -64,15 +65,18 @@ public class Console {
         } while (true);
     }
 
-    static public Date readDate(String prompt) {
+    static public Calendar readDate(String prompt) {
         do {
             try {
                 String strDate = readLine(prompt);
 
                 SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
 
-                Date date = df.parse(strDate);
-
+                Date d = df.parse(strDate);
+                
+                Calendar date=Calendar.getInstance();
+                   
+                date.setTime(d);
                 return date;
             } catch (ParseException ex) {
                 Logger.getLogger(Console.class.getName()).log(Level.SEVERE, null, ex);
