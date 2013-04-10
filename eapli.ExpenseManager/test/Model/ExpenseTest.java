@@ -7,6 +7,7 @@ package Model;
 import eapli.util.DateTime;
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -29,7 +30,7 @@ public class ExpenseTest {
     @Test
     public void testGetDate() {
         SimpleDateFormat sdf1= new SimpleDateFormat("dd/MM/yyyy");
-        Date date = ex.getDate();
+        Calendar date = ex.getDate();
         assertEquals("22/12/2013", sdf1.format(date));
     }
 }
