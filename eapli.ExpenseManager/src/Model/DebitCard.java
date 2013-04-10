@@ -10,26 +10,10 @@ package Model;
  */
 public class DebitCard extends PaymentType {
 
-    private int sum;
-
     public DebitCard() {
-        super();
-        sum = 0;
     }
 
-    public DebitCard(int number,int sum) {
-        super(number);
-        this.sum = sum;
+    public DebitCard(int id_number, PaymentTypeEnum type, String bank) {
+        super(id_number, type, bank);
     }
-
-    @Override
-    public boolean payExpenses(int mt) {
-        if ((this.sum - mt) > 0) {
-            return false;
-        } else {
-            this.sum -= mt;
-        }
-        return true;
-    }
-
 }
