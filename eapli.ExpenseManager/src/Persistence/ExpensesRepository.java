@@ -5,10 +5,13 @@ package Persistence;
  * and open the template in the editor.
  */
  
+import Model.DailyExpense;
 import Model.Expense;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 
@@ -60,5 +63,36 @@ public class ExpensesRepository  implements IExpensesRepository
         }
         return years;
     }
-    
+        
+    @Override
+    public DailyExpense calulateMaxMonthlyExpense(int month, int year){
+        ArrayList<DailyExpense> daily_expense_values = calulateMonthlyExpenses(month, year);
+        DailyExpense maxExpenseValue = daily_expense_values.get(0);
+        for(int i = 1; i < 31; i++){
+            if(maxExpenseValue.equals(daily_expense_values.get(i))){
+                maxExpenseValue = daily_expense_values.get(i);
+            }
+        }
+        
+        return maxExpenseValue;
+    }
+        
+    @Override
+    public ArrayList<DailyExpense> calulateMonthlyExpenses(int month, int year){
+        /* Cannot Be Implemented */
+        ArrayList<DailyExpense> daily_expense_values = new ArrayList();
+        for(int i = 0; i < 31; i++){
+            daily_expense_values.set(i, new DailyExpense(i+1, month, year, new BigDecimal(-1)));
+        }
+        DailyExpense adder;
+        for (Iterator<Expense> it = listExpense.iterator(); it.hasNext();) {
+            Expense e = it.next();
+            if((e.getDate().get(Calendar.MONTH)== month) && (e.getDate().get(Calendar.YEAR) == year)){
+                adder = daily_expense_values.get(e.getDate().get(Calendar.DAY_OF_MONTH)-1);
+                adder.addValue(e.getAmount());
+                daily_expense_values.set(e.getDate().get(Calendar.DAY_OF_MONTH)-1, adder);
+            }
+        }
+        return daily_expense_values;
+    }
 }

@@ -1,6 +1,8 @@
 package Persistence;
  
+import Model.DailyExpense;
 import Model.Expense;
+import java.util.ArrayList;
 import java.util.List;
 /**
  *
@@ -11,4 +13,6 @@ public interface IExpensesRepository {
     Expense getLastExpense();
     List<Expense> getAllExpenses();        
     List<Integer> getAllExpensesYears();
+    DailyExpense calulateMaxMonthlyExpense(int month, int year);
+    ArrayList<DailyExpense> calulateMonthlyExpenses(int month, int year);
 }
