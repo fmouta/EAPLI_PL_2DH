@@ -32,4 +32,9 @@ public class ExpensesController {
         
     }
     
+    public List<Integer> getAllExpensesYears(){
+        IExpensesRepository repo = new ExpensesRepository();
+        return repo.getAllExpensesYears();
+    }
+    
 }

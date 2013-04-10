@@ -10,5 +10,5 @@ public interface IExpensesRepository {
     void save(Expense exp);
     Expense getLastExpense();
     List<Expense> getAllExpenses();        
-
+    List<Integer> getAllExpensesYears();
 }

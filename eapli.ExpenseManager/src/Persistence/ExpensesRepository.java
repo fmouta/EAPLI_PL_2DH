@@ -7,6 +7,7 @@ package Persistence;
  
 import Model.Expense;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
 
@@ -39,5 +40,25 @@ public class ExpensesRepository  implements IExpensesRepository
         return Collections.unmodifiableList(listExpense);
     }
     
+    public List<Integer> getAllExpensesYears()
+    {
+        List<Integer> years = new ArrayList<>();
+        
+        boolean flag=false;
+        for (Expense exp: listExpense) {
+            if(!years.isEmpty()){
+                for(int d: years){
+                    if(exp.getDate().get(Calendar.YEAR)==d)
+                        flag=true;
+                }
+                if(flag==false)
+                    years.add(exp.getDate().get(Calendar.YEAR));
+            }else{
+               years.add(exp.getDate().get(Calendar.YEAR));
+            }
+            flag=false;
+        }
+        return years;
+    }
     
 }
