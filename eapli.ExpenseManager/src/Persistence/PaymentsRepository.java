@@ -4,8 +4,11 @@
  */
 package Persistence;
 
-import Model.Expense;
 import Model.PaymentType;
+import Model.CreditCard;
+import Model.Check;
+import Model.DebitCard;
+import Model.PaymentTypeEnum;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -18,7 +21,7 @@ public class PaymentsRepository {
     
     // class member
     private static List<PaymentType> listPayments= new ArrayList<PaymentType>();
-
+ 
     public PaymentsRepository() {}
     
     public void save(PaymentType type)
@@ -32,9 +35,18 @@ public class PaymentsRepository {
         return Collections.unmodifiableList(listPayments);
     }
     
+    public List<PaymentType> getCreatedTypes() {
+        return listPayments;
+    }
+    
     public PaymentType getSelectedType(int option) {
-        //A implementar
-        return null;
+        PaymentType chosentype = listPayments.get(option);
+        if(chosentype.getType() == PaymentTypeEnum.Check) {
+            return (Check)chosentype;
+        } else if(chosentype.getType() == PaymentTypeEnum.CreditCard) {
+            return (CreditCard) chosentype;
+        }
+        return (DebitCard)chosentype;
     }
     
 }

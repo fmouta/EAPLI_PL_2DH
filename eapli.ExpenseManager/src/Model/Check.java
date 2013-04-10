@@ -10,21 +10,10 @@ package Model;
  */
 public class Check extends PaymentType {
     
-    private int value;
-
     public Check() {
-        super();
-        value = 0;
     }
 
-    public Check(int value, int number) {
-        super(number);
-        this.value = value;
+     public Check(int id_number, PaymentTypeEnum type, String bank) {
+        super(id_number, type, bank);
     }
-    
-    public boolean payExpenses(int mt) {
-        value = 0;
-        return true;
-    }
-    
 }

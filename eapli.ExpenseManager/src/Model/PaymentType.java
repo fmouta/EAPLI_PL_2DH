@@ -9,21 +9,33 @@ package Model;
  * @author 1111314, 1111407
  */
 public abstract class PaymentType {
-    
-    int id_number;
+
+    private String bank;
+    private int id_number;
+    private PaymentTypeEnum type;
 
     public PaymentType() {
-        id_number = 0;
     }
 
-    public PaymentType(int id_number) {
+    public PaymentType(int id_number, PaymentTypeEnum type, String bank) {
         this.id_number = id_number;
+        this.type = type;
+        this.bank = bank;
+    }
+
+    public PaymentTypeEnum getType() {
+        return type;
     }
     
-    public int getIdNumber() {
+    public int getIDNumber() {
         return id_number;
     }
     
-    public abstract boolean payExpenses(int mt);
+    public String getBank() {
+        return bank;
+    }
     
+    public String toString() {
+        return type + " : " + id_number + ", " + bank;
+    }
 }
