@@ -4,7 +4,9 @@
  */
 package Model;
 
+import eapli.util.DateTime;
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -18,25 +20,17 @@ import static org.junit.Assert.*;
  * @author i111623
  */
 public class ExpenseTest {
-    
+        private Expense ex;
+        
     public ExpenseTest() {
+        ex = new Expense(new ExpenseType("Autocarro"), 2013, 12, 22, new BigDecimal(2.4));
     }
     
     @Test
     public void testGetDate() {
-        System.out.println("getDate");
-        fail("The test case is a prototype.");
-    }
-
-    @Test
-    public void testGetAmount() {
-        System.out.println("getAmount");
-        fail("The test case is a prototype.");
-    }
-
-    @Test
-    public void testGetDescription() {
-        System.out.println("getDescription");
-        fail("The test case is a prototype.");
+        SimpleDateFormat sdf1= new SimpleDateFormat("dd/MM/yyyy");
+        Date date = ex.getDate();
+        assertEquals("22/12/2013", sdf1.format(date));
     }
 }
+
