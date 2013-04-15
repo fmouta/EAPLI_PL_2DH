@@ -16,7 +16,7 @@ import java.util.logging.Logger;
 *
 * @author Paulo Gandra Sousa
 */
-public /* static */ class DateTime {
+public class DateTime {
 
     public static Calendar today() {
         Calendar today = new GregorianCalendar();
