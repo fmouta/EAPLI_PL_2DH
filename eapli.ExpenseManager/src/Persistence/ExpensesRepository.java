@@ -8,9 +8,11 @@ package Persistence;
 import Model.DailyExpense;
 import Model.Expense;
 import java.math.BigDecimal;
+import java.math.MathContext;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
@@ -64,6 +66,51 @@ public class ExpensesRepository  implements IExpensesRepository
         return years;
     }
         
+    
+    public BigDecimal getTotalWeek()
+    {
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.DAY_OF_WEEK,
+        cal.getActualMinimum(Calendar.DAY_OF_WEEK));
+        Date firstDayOfTheWeek = cal.getTime();
+
+        BigDecimal total=new BigDecimal(0);
+        for (int i = 0; i < listExpense.size(); i++) {
+            Expense despesa=listExpense.get(i);
+            if(despesa.getDate().after(firstDayOfTheWeek)){
+                System.out.println("Expense: "+despesa.getDescription()+" \nValue: "+despesa.getAmount()+"€\nDate: "+despesa.getDate()+"\n");
+                total=total.add(despesa.getAmount());
+            }
+        }
+      return total; 
+    }
+
+
+
+
+    
+    public BigDecimal getTotalMonth()
+    {
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.DAY_OF_MONTH,
+        cal.getActualMinimum(Calendar.DAY_OF_MONTH));
+        Date firstDayOfTheMonth = cal.getTime();
+        BigDecimal total=new BigDecimal(0);
+        for (int i = 0; i < listExpense.size(); i++) {
+            Expense despesa=listExpense.get(i);
+            Date dateDespense=despesa.getDate().getTime();
+
+        if(dateDespense.after(firstDayOfTheMonth)){
+                 System.out.println("Expense: "+despesa.getDescription()+" \nValue: "+despesa.getAmount().round(new MathContext(2))+"€\nDate: "+despesa.getDate()+"\n");
+                total=total.add(despesa.getAmount());
+            }
+        }
+      return total; 
+    }
+    
+    
+    
+    
     @Override
     public DailyExpense calulateMaxMonthlyExpense(int month, int year){
         ArrayList<DailyExpense> daily_expense_values = calulateMonthlyExpenses(month, year);
