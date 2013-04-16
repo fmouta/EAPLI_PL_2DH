@@ -47,7 +47,7 @@ public class ExpensesRepository  implements IExpensesRepository
     
     public List<Integer> getAllExpensesYears()
     {
-        List<Integer> years = new ArrayList<>();
+        List<Integer> years = new ArrayList();
         
         boolean flag=false;
         for (Expense exp: listExpense) {

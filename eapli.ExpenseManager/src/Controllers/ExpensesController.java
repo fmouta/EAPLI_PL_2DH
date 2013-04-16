@@ -8,6 +8,9 @@ package Controllers;
 import Model.Expense;
 import Persistence.ExpensesRepository;
 import Persistence.IExpensesRepository;
+import Model.ExpenseType;
+import Persistence.ExpenseTypeRepository;
+import Persistence.IExpenseTypesRepository;
 import java.util.List;
 /**
  *
@@ -35,6 +38,15 @@ public class ExpensesController {
     public List<Integer> getAllExpensesYears(){
         IExpensesRepository repo = new ExpensesRepository();
         return repo.getAllExpensesYears();
+    }
+    
+    public void save(){
+        
+    }
+    
+    public List<ExpenseType> getAllExpenseTypes() {
+        IExpenseTypesRepository repo = new ExpenseTypeRepository();
+        return repo.getAllExpenseTypes();
     }
     
 }
