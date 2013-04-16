@@ -10,6 +10,7 @@ import Presentation.MainMenu;
 import eapli.util.Math;
 import Persistence.*;
 import eapli.bootstrap.ExpensesBootstrapper;
+import eapli.bootstrap.ExpensesTypeBootstrapper;
 
 /**
  *
@@ -22,6 +23,7 @@ public class ExpensesManager {
      */
     public static void main(String[] args) {
         ExpensesBootstrapper e = new ExpensesBootstrapper();
+        ExpensesTypeBootstrapper et = new ExpensesTypeBootstrapper();
         MainMenu menu = new MainMenu();
         menu.mainLoop();
     }

@@ -6,6 +6,7 @@ package Presentation;
  */
  
 
+import Controllers.ExpenseTypeController;
 import Controllers.ExpensesRegisterController;
 import Controllers.ExpensesRegisterController;
 import Model.ExpenseType;
@@ -14,6 +15,7 @@ import eapli.util.Console;
 import java.math.BigDecimal;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 /**
  *
@@ -24,7 +26,16 @@ class ExpenseRegisterUI {
     public void mainLoop() {
         System.out.println("* * *  REGISTER AN EXPENSE  * * *\n");
         
-        ExpenseType what = new ExpenseType(Console.readLine("Description:"));
+        AllExpensesTypesUI u1= new AllExpensesTypesUI();
+        u1.mainLoop();
+        
+        int option=Integer.parseInt(Console.readLine("Escolha uma das descrições acima descritas:\n \n Description:"));
+        ExpenseTypeController control = new ExpenseTypeController();
+        List<ExpenseType> list = control.getAllExpenseTypes();
+        
+        ExpenseType what = new ExpenseType((list.get(option).getDescription()));
+        
+        
         Calendar date = Console.readDate("When:");
         double value = Console.readDouble("Amount:");
         BigDecimal amount = new BigDecimal(value);
