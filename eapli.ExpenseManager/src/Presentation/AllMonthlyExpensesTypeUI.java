@@ -25,7 +25,6 @@ public class AllMonthlyExpensesTypeUI {
         ExpensesController controller = new ExpensesController();
         List<Integer> years = controller.getAllExpensesYears();
         List<ExpenseType> expensestypes = controller.getAllExpenseTypes();
-        System.out.println(expensestypes.size());
         MonthlyExpense temp;
 
         for(ExpenseType expt: expensestypes){
