@@ -161,12 +161,12 @@ public class ExpensesRepository  implements IExpensesRepository
         int month = DateTime.currentMonth();
         BigDecimal expenditure = new BigDecimal(0);
         for (Expense exp : listExpense) {
-            if (year == exp.getDate().get(Calendar.YEAR)
-                    && month == exp.getDate().get(Calendar.MONTH) + 1) {
+            if ( year == exp.getDate().get(Calendar.YEAR)
+                    && month == (exp.getDate().get(Calendar.MONTH) + 1)) {
                 expenditure = expenditure.add(exp.getAmount());
             }
         }
         return expenditure;
     }
-    
+
 }

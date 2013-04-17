@@ -8,17 +8,14 @@ import java.math.BigDecimal;
 import java.math.MathContext;
 
 public class ExpensesValueUI  extends BaseUI {
-    
-        
+  
     private ExpensesController controller = new ExpensesController();
-    
-    
+
     public BaseController controller() {
         return controller;
     }
-       
-    
-    public void mainLoop()  {
+
+    public void mainLoop2()  {
         int option;
         BigDecimal totWeek,totMonth; 
         ExpensesController controller = new ExpensesController();

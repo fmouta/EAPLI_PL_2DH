@@ -22,17 +22,15 @@ import java.util.List;
  * @author Paulo Gandra Sousa
  */
 class ExpenseRegisterUI  extends BaseUI {
-    
-        
+      
     private ExpensesController controller = new ExpensesController();
-    
-    
+
     public BaseController controller() {
         return controller;
     }
     
     
-    public void mainLoop() {
+    public void mainLoop2() {
         System.out.println("* * *  REGISTER AN EXPENSE  * * *\n");
         
         AllExpensesTypesUI u1= new AllExpensesTypesUI();

@@ -8,15 +8,13 @@ import java.util.List;
 
 class AllIncomeTypesUI  extends BaseUI {
     
-    
     private ExpensesController controller = new ExpensesController();
-    
-    
+     
     public BaseController controller() {
         return controller;
     }
       
-    public void mainLoop() {
+    public void mainLoop2() {
         System.out.println("* * *  INCOME TYPES  * * *\n");
         
         IncomeTypeController controller = new IncomeTypeController();

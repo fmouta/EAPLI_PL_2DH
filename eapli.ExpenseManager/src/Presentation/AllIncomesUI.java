@@ -13,17 +13,14 @@ import java.math.BigDecimal;
 import java.util.List;
 
 class AllIncomesUI  extends BaseUI {
-    
-        
+  
     private ExpensesController controller = new ExpensesController();
-    
     
     public BaseController controller() {
         return controller;
     }
     
-
-    public void mainLoop() {
+    public void mainLoop2() {
         System.out.println("\"* * *  INCOMES  * * *\\n\"");
         IncomeRegisterController controller = new IncomeRegisterController();
         List<Income> list = controller.registerIncome();

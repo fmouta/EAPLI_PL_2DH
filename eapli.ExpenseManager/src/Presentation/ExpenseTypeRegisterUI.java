@@ -15,17 +15,13 @@ import eapli.util.Console;
  */
 public class ExpenseTypeRegisterUI  extends BaseUI {
     
-        
     private ExpensesController controller = new ExpensesController();
-    
-    
+
     public BaseController controller() {
         return controller;
     }
-    
-    
-    
-    public void mainLoop() {
+     
+    public void mainLoop2() {
         System.out.println("* * *  REGISTER AN EXPENSE TYPE  * * *\n");
         
         

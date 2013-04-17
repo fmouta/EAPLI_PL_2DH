@@ -7,6 +7,12 @@ import java.text.NumberFormat;
 public abstract class BaseUI {
     
     abstract BaseController controller();
+    abstract void mainLoop2();
+    
+     public void mainLoop() {
+         mainLoop2();
+         showBalances();
+     }
     
     public void showBalances() {
         System.out.println("------------------------------------------");

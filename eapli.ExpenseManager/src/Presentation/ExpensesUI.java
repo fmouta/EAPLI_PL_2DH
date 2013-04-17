@@ -17,18 +17,14 @@ import java.math.BigDecimal;
  * @author Paulo Gandra Sousa
  */
 class ExpensesUI  extends BaseUI {
-    
-        
+
     private ExpensesController controller = new ExpensesController();
-    
     
     public BaseController controller() {
         return controller;
     }
     
-    
-    
-    public void mainLoop() {
+    public void mainLoop2() {
         System.out.println("* * *  SHOW LAST EXPENSE  * * *\n");
         
         ExpensesController controller = new ExpensesController();

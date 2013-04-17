@@ -13,18 +13,16 @@ import java.util.Calendar;
 import java.math.BigDecimal;
 
 public class IncomeRegisterUI  extends BaseUI {
-    
-     
+
     private ExpensesController controller = new ExpensesController();
-    
-    
+
     public BaseController controller() {
         return controller;
     }
        
     
 
-    public void mainLoop() {
+    public void mainLoop2() {
         System.out.println("* * *  REGISTER AN INCOME  * * *\n");
 
         IncomeType what = new IncomeType(Console.readLine("Description:"));

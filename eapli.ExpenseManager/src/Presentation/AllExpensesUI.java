@@ -21,12 +21,11 @@ class AllExpensesUI extends BaseUI {
     
     private ExpensesController controller = new ExpensesController();
     
-    
     public BaseController controller() {
         return controller;
     }
     
-    public void mainLoop() {
+    public void mainLoop2() {
         System.out.println("* * *  SHOW ALL EXPENSES  * * *\n");
         
         ExpensesController controller = new ExpensesController();

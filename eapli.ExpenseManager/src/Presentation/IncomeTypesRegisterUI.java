@@ -17,17 +17,14 @@ import eapli.util.Console;
  * @author Paulo Gandra Sousa
  */
 class IncomeTypeRegisterUI  extends BaseUI {
-    
-        
+     
     private ExpensesController controller = new ExpensesController();
-    
-    
+
     public BaseController controller() {
         return controller;
     }
-    
-    
-    public void mainLoop() {
+  
+    public void mainLoop2() {
         System.out.println("* * *  REGISTER AN INCOME TYPE  * * *\n");
         
         String type = Console.readLine("Type:");

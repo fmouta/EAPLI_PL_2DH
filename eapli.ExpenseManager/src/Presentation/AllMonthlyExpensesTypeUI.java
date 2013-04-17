@@ -16,17 +16,14 @@ import java.util.List;
  * @author Ben
  */
 public class AllMonthlyExpensesTypeUI  extends BaseUI {
-    
         
     private ExpensesController controller = new ExpensesController();
-    
-    
+     
     public BaseController controller() {
         return controller;
     }
-    
-
-    public void mainLoop() {
+   
+    public void mainLoop2() {
 
         ExpensesController controller = new ExpensesController();
         List<Integer> years = controller.getAllExpensesYears();

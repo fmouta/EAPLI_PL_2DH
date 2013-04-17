@@ -14,13 +14,14 @@ import java.util.List;
  * @author i091325
  */
 public class AllExpensesTypesUI  extends BaseUI {
+    
     private ExpenseTypeController controller = new ExpenseTypeController();
     
     public BaseController controller() {
         return controller;
     }
     
-    public void mainLoop() {
+    public void mainLoop2() {
         System.out.println("* * *  EXPENSES TYPES  * * *\n");
         
         ExpenseTypeController controller = new ExpenseTypeController();
