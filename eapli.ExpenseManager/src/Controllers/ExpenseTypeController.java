@@ -13,7 +13,7 @@ import java.util.List;
  *
  * @author i091325
  */
-public class ExpenseTypeController {
+public class ExpenseTypeController extends BaseController {
        public ExpenseTypeController() {
     }
    

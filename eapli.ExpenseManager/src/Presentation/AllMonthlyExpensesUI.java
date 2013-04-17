@@ -5,6 +5,7 @@ package Presentation;
  * and open the template in the editor.
  */
  
+import Controllers.BaseController;
 import Controllers.ExpensesController;
 import Model.Expense;
 import Model.MonthlyExpense;
@@ -20,7 +21,17 @@ import java.util.List;
  *
  * @author Paulo Gandra Sousa
  */
-public class AllMonthlyExpensesUI {
+public class AllMonthlyExpensesUI extends BaseUI {
+    
+        
+    private ExpensesController controller = new ExpensesController();
+    
+    
+    public BaseController controller() {
+        return controller;
+    }
+    
+    
     public void mainLoop() {
           
         ExpensesController controller = new ExpensesController();

@@ -1,6 +1,7 @@
 
 package Presentation;
 
+import Controllers.BaseController;
 import java.text.NumberFormat;
 
 public abstract class BaseUI {

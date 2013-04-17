@@ -4,13 +4,24 @@
  */
 package Presentation;
 
+import Controllers.BaseController;
+import Controllers.ExpensesController;
 import Controllers.IncomeRegisterController;
 import Model.Income;
 import Model.IncomeType;
 import java.math.BigDecimal;
 import java.util.List;
 
-class AllIncomesUI {
+class AllIncomesUI  extends BaseUI {
+    
+        
+    private ExpensesController controller = new ExpensesController();
+    
+    
+    public BaseController controller() {
+        return controller;
+    }
+    
 
     public void mainLoop() {
         System.out.println("\"* * *  INCOMES  * * *\\n\"");

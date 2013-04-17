@@ -8,7 +8,7 @@ import java.util.List;
  *
  * @author 1110422
  */
-public class IncomeTypeController {
+public class IncomeTypeController extends BaseController {
 
     public IncomeTypeController() {
     }

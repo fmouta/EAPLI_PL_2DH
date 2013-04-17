@@ -4,14 +4,25 @@
  */
 package Presentation;
 
+import Controllers.BaseController;
+import Controllers.ExpensesController;
 import Controllers.IncomeRegisterController;
 import Model.IncomeType;
 import eapli.util.Console;
 import java.util.Calendar;
 import java.math.BigDecimal;
-import java.util.Date;
 
-public class IncomeRegisterUI {
+public class IncomeRegisterUI  extends BaseUI {
+    
+     
+    private ExpensesController controller = new ExpensesController();
+    
+    
+    public BaseController controller() {
+        return controller;
+    }
+       
+    
 
     public void mainLoop() {
         System.out.println("* * *  REGISTER AN INCOME  * * *\n");

@@ -1,10 +1,21 @@
 package Presentation;
 
+import Controllers.BaseController;
+import Controllers.ExpensesController;
 import Controllers.IncomeTypeController;
 import Model.IncomeType;
 import java.util.List;
 
-class AllIncomeTypesUI {
+class AllIncomeTypesUI  extends BaseUI {
+    
+    
+    private ExpensesController controller = new ExpensesController();
+    
+    
+    public BaseController controller() {
+        return controller;
+    }
+      
     public void mainLoop() {
         System.out.println("* * *  INCOME TYPES  * * *\n");
         

@@ -1,19 +1,27 @@
 
 package Presentation;
 
+import Controllers.BaseController;
 import eapli.util.Console;
-import Controllers.ExpensesValueController;
-import Model.Expense;
-import Persistence.ExpensesRepository;
-import Persistence.IExpensesRepository;
+import Controllers.ExpensesController;
 import java.math.BigDecimal;
 import java.math.MathContext;
 
-public class ExpensesValueUI {
+public class ExpensesValueUI  extends BaseUI {
+    
+        
+    private ExpensesController controller = new ExpensesController();
+    
+    
+    public BaseController controller() {
+        return controller;
+    }
+       
+    
     public void mainLoop()  {
         int option;
         BigDecimal totWeek,totMonth; 
-        ExpensesValueController controller = new ExpensesValueController();
+        ExpensesController controller = new ExpensesController();
         MainMenu menu=new MainMenu();
         do {
         System.out.println("Show Total Expenses\n");

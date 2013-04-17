@@ -4,14 +4,26 @@
  */
 package Presentation;
 
+import Controllers.BaseController;
 import Controllers.ExpenseTypeRegisterController;
+import Controllers.ExpensesController;
 import eapli.util.Console;
 
 /**
  *
  * @author i091325
  */
-public class ExpenseTypeRegisterUI {
+public class ExpenseTypeRegisterUI  extends BaseUI {
+    
+        
+    private ExpensesController controller = new ExpensesController();
+    
+    
+    public BaseController controller() {
+        return controller;
+    }
+    
+    
     
     public void mainLoop() {
         System.out.println("* * *  REGISTER AN EXPENSE TYPE  * * *\n");

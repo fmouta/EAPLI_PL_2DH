@@ -12,7 +12,7 @@ import Persistence.ExpenseTypeRepository;
  *
  * @author i091325
  */
-public class ExpenseTypeRegisterController {
+public class ExpenseTypeRegisterController  extends BaseController {
       public ExpenseTypeRegisterController() {
     }
 

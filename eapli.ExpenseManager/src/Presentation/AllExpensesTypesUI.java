@@ -4,6 +4,7 @@
  */
 package Presentation;
 
+import Controllers.BaseController;
 import Controllers.ExpenseTypeController;
 import Model.ExpenseType;
 import java.util.List;
@@ -12,7 +13,13 @@ import java.util.List;
  *
  * @author i091325
  */
-public class AllExpensesTypesUI {
+public class AllExpensesTypesUI  extends BaseUI {
+    private ExpenseTypeController controller = new ExpenseTypeController();
+    
+    public BaseController controller() {
+        return controller;
+    }
+    
     public void mainLoop() {
         System.out.println("* * *  EXPENSES TYPES  * * *\n");
         

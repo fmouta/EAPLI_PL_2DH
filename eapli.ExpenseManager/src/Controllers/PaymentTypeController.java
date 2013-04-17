@@ -12,7 +12,7 @@ import java.util.List;
  *
  * @author Paulo Jorge
  */
-public class PaymentTypeController {
+public class PaymentTypeController extends BaseController {
 
     public PaymentTypeController() {
     }

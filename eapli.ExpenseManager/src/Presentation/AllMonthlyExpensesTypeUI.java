@@ -5,20 +5,26 @@
 package Presentation;
 
 //import Persistence.ExpensesTypesRepository;
+import Controllers.BaseController;
 import Controllers.ExpensesController;
-import Model.Expense;
 import Model.ExpenseType;
 import Model.MonthlyExpense;
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 /**
  *
  * @author Ben
  */
-public class AllMonthlyExpensesTypeUI {
+public class AllMonthlyExpensesTypeUI  extends BaseUI {
+    
+        
+    private ExpensesController controller = new ExpensesController();
+    
+    
+    public BaseController controller() {
+        return controller;
+    }
+    
 
     public void mainLoop() {
 

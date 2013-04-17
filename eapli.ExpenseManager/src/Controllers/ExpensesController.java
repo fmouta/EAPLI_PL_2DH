@@ -11,12 +11,13 @@ import Persistence.IExpensesRepository;
 import Model.ExpenseType;
 import Persistence.ExpenseTypeRepository;
 import Persistence.IExpenseTypesRepository;
+import java.math.BigDecimal;
 import java.util.List;
 /**
  *
  * @author Paulo Gandra Sousa
  */
-public class ExpensesController {
+public class ExpensesController  extends BaseController {
 
     public ExpensesController() {
     }
@@ -49,4 +50,13 @@ public class ExpensesController {
         return repo.getAllExpenseTypes();
     }
     
+    public BigDecimal getTotalWeek() {
+        IExpensesRepository repo = new ExpensesRepository();
+        return repo.getThisWeekExpenditure();
+    }
+    
+    public BigDecimal getTotalMonth()  {
+        IExpensesRepository repo = new ExpensesRepository();
+        return repo.getThisMonthExpenditure();
+    }
 }

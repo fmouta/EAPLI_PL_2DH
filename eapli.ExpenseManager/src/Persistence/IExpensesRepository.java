@@ -17,4 +17,5 @@ public interface IExpensesRepository {
     DailyExpense calulateMaxMonthlyExpense(int month, int year);
     ArrayList<DailyExpense> calulateMonthlyExpenses(int month, int year);
     BigDecimal getThisWeekExpenditure();
+    BigDecimal getThisMonthExpenditure();
 }

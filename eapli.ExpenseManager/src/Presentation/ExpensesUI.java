@@ -5,6 +5,7 @@ package Presentation;
  * and open the template in the editor.
  */
  
+import Controllers.BaseController;
 import Controllers.ExpensesController;
 
 import Model.Expense;
@@ -15,7 +16,18 @@ import java.math.BigDecimal;
  *
  * @author Paulo Gandra Sousa
  */
-class ExpensesUI {
+class ExpensesUI  extends BaseUI {
+    
+        
+    private ExpensesController controller = new ExpensesController();
+    
+    
+    public BaseController controller() {
+        return controller;
+    }
+    
+    
+    
     public void mainLoop() {
         System.out.println("* * *  SHOW LAST EXPENSE  * * *\n");
         

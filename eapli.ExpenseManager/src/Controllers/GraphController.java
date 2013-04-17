@@ -15,7 +15,7 @@ import java.util.List;
  *
  * @author Carlos Tavares
  */
-public class GraphController {
+public class GraphController  extends BaseController {
     
     public void printGraph(int month, int year){
         ExpensesRepository repository = new ExpensesRepository();

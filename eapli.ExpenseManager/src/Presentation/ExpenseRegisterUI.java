@@ -6,22 +6,31 @@ package Presentation;
  */
  
 
+import Controllers.BaseController;
 import Controllers.ExpenseTypeController;
-import Controllers.ExpensesRegisterController;
+import Controllers.ExpensesController;
 import Controllers.ExpensesRegisterController;
 import Model.ExpenseType;
 
 import eapli.util.Console;
 import java.math.BigDecimal;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 /**
  *
  * @author Paulo Gandra Sousa
  */
-class ExpenseRegisterUI {
+class ExpenseRegisterUI  extends BaseUI {
+    
+        
+    private ExpensesController controller = new ExpensesController();
+    
+    
+    public BaseController controller() {
+        return controller;
+    }
+    
     
     public void mainLoop() {
         System.out.println("* * *  REGISTER AN EXPENSE  * * *\n");

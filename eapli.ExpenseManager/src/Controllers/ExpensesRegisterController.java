@@ -15,7 +15,7 @@ import java.util.Calendar;
  *
  * @author Paulo Gandra Sousa
  */
-public class ExpensesRegisterController {
+public class ExpensesRegisterController  extends BaseController {
 
     public ExpensesRegisterController() {
     }

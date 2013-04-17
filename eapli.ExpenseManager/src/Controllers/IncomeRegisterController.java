@@ -12,7 +12,7 @@ import Persistence.*;
 import java.util.Calendar;
 import java.util.List;
 
-public class IncomeRegisterController {
+public class IncomeRegisterController extends BaseController {
 
     public IncomeRegisterController() {
     }
