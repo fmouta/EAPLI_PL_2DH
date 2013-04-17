@@ -10,15 +10,16 @@ import java.math.BigDecimal;
 import java.util.Date;
 import Persistence.*;
 import java.util.Calendar;
+import java.util.List;
 
 public class IncomeRegisterController {
 
     public IncomeRegisterController() {
     }
 
-    public void registerIncome(IncomeType what, Calendar date, BigDecimal amount) {
-        Income income = new Income(what, date, amount);
+    public List<Income> registerIncome() {
+
         IIncomeRepository repo = new IncomeRepository();
-        repo.save(income);
+        return repo.getAllIncomes();
     }
 }

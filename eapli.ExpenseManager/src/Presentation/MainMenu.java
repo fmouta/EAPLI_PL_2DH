@@ -23,6 +23,8 @@ public class MainMenu {
             System.out.println("1. Register an expense");
             System.out.println("2. Show last expense");
             System.out.println("3. Show all expenses");
+            System.out.println("4. Show monthly expenses");
+            System.out.println("5. Show monthly expenses aggregated by type");
             System.out.println("0. Exit\n\n");
 
             option = Console.readInteger("Please choose a option");
@@ -41,6 +43,14 @@ public class MainMenu {
                 case 3:
                     AllExpensesUI ui3 = new AllExpensesUI();
                     ui3.mainLoop();
+                    break;
+                case 4:
+                    AllMonthlyExpensesUI ui4 = new AllMonthlyExpensesUI();
+                    ui4.mainLoop();
+                    break;
+                case 5:
+                    AllMonthlyExpensesTypeUI ui5 = new AllMonthlyExpensesTypeUI();
+                    ui5.mainLoop();
                     break;
                 default:
                     System.out.println("Invalid Option\nPlease try again");

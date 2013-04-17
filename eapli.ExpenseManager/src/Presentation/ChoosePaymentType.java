@@ -6,9 +6,8 @@ package Presentation;
 
 import Model.PaymentType;
 import eapli.util.Console;
-import java.util.ArrayList;
 import java.util.List;
-import Persistence.PaymentsRepository;
+import Controllers.PaymentTypeController;
 
 /**
  *
@@ -20,8 +19,8 @@ public class ChoosePaymentType {
 
         System.out.println("\n Choose Payment Type \n");
         int option = 0;
-       PaymentsRepository repo = new PaymentsRepository();
-       List<PaymentType> possibleListPayments = repo.getCreatedTypes();
+       PaymentTypeController repo_controller = new PaymentTypeController();
+        List<PaymentType> possibleListPayments = repo_controller.getAllPaymentTypes();
         do {
             for (int index = 0; index < possibleListPayments.size(); index++) {
                 System.out.println(possibleListPayments.get(index).getClass());
@@ -29,8 +28,7 @@ public class ChoosePaymentType {
             }
             option = Console.readInteger("\nOption: ");
         } while (option <= 0 || option > possibleListPayments.size());
-        
+
         //1) return repo.getSelectedType(option);
     }
-    
 }

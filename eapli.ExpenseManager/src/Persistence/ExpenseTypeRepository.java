@@ -6,6 +6,7 @@ package Persistence;
 
 import Model.ExpenseType;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -22,6 +23,6 @@ public class ExpenseTypeRepository implements IExpenseTypesRepository{
 
     @Override
     public List<ExpenseType> getAllExpenseTypes() {
-        return listExpenciveType;
+        return Collections.unmodifiableList(listExpenciveType);
     }
 }
