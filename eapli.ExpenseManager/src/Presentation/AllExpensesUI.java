@@ -16,7 +16,7 @@ import java.util.List;
  *
  * @author Paulo Gandra Sousa
  */
-class AllExpensesUI {
+class AllExpensesUI extends BaseUI {
     public void mainLoop() {
         System.out.println("* * *  SHOW ALL EXPENSES  * * *\n");
         

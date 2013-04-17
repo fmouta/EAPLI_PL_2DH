@@ -2,6 +2,7 @@ package Persistence;
  
 import Model.DailyExpense;
 import Model.Expense;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 /**
@@ -15,4 +16,5 @@ public interface IExpensesRepository {
     List<Integer> getAllExpensesYears();
     DailyExpense calulateMaxMonthlyExpense(int month, int year);
     ArrayList<DailyExpense> calulateMonthlyExpenses(int month, int year);
+    BigDecimal getThisWeekExpenditure();
 }

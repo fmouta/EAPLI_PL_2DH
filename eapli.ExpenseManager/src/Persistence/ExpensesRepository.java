@@ -14,6 +14,9 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
+import eapli.util.DateTime;
+import java.util.Date;
+
 
 public class ExpensesRepository  implements IExpensesRepository
 {
@@ -95,4 +98,28 @@ public class ExpensesRepository  implements IExpensesRepository
         }
         return daily_expense_values;
     }
+    
+    public BigDecimal getThisWeekExpenditure() {
+        int weekNumber = DateTime.weekNumber(DateTime.today());
+        BigDecimal expenditure = new BigDecimal(0);
+        for (Expense exp: listExpense) {
+            if (weekNumber == DateTime.weekNumber(exp.getDate()))
+                expenditure = expenditure.add(exp.getAmount());
+        }
+        return expenditure;
+    }
+        
+    public BigDecimal getThisMonthExpenditure() {
+        int year = DateTime.currentYear();
+        int month = DateTime.currentMonth();
+        BigDecimal expenditure = new BigDecimal(0);
+        for (Expense exp : listExpense) {
+            if (year == exp.getDate().get(Calendar.YEAR)
+                    && month == exp.getDate().get(Calendar.MONTH) + 1) {
+                expenditure = expenditure.add(exp.getAmount());
+            }
+        }
+        return expenditure;
+    }
+    
 }
