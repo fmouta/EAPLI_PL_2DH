@@ -6,6 +6,7 @@ package Model;
 
 import Controllers.ExpensesController;
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Calendar;
 import java.util.List;
 
@@ -62,7 +63,7 @@ public class MonthlyExpense {
     }
     
     public String toString() {
-        return "Year " + year + "\nMonth " + month + "\nExpense " + value;
+        return "Year " + year + "\nMonth " + month + "\nExpense " + value.setScale( 2, BigDecimal.ROUND_HALF_UP)+ "€";
     }
     
     public BigDecimal getValue(){

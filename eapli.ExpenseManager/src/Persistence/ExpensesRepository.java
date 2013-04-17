@@ -76,13 +76,16 @@ public class ExpensesRepository  implements IExpensesRepository
         cal.set(Calendar.DAY_OF_WEEK,
         cal.getActualMinimum(Calendar.DAY_OF_WEEK));
         Date firstDayOfTheWeek = cal.getTime();
-
+        
         BigDecimal total=new BigDecimal(0);
         for (int i = 0; i < listExpense.size(); i++) {
             Expense despesa=listExpense.get(i);
-            if(despesa.getDate().after(firstDayOfTheWeek)){
+            Date dateDespense=despesa.getDate().getTime();
+            
+            if(dateDespense.after(firstDayOfTheWeek)){
                 System.out.println("Expense: "+despesa.getDescription()+" \nValue: "+despesa.getAmount()+"€\nDate: "+despesa.getDate()+"\n");
                 total=total.add(despesa.getAmount());
+            
             }
         }
       return total; 

@@ -6,7 +6,6 @@ package Controllers;
 
 import Model.DailyExpense;
 import Persistence.ExpensesRepository;
-import Presentation.Graph;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,16 +16,17 @@ import java.util.List;
  */
 public class GraphController  extends BaseController {
     
-    public void printGraph(int month, int year){
+    public GraphModelViewer graphModel(int month, int year){
         ExpensesRepository repository = new ExpensesRepository();
-        DailyExpense maxExpense = repository.calulateMaxMonthlyExpense(month, year);
-        List<DailyExpense> daily_expense_values = repository.calulateMonthlyExpenses(month, year);
-        int days = countDays(daily_expense_values);
-        int[] locations = dayLocation(daily_expense_values);
-        int[][] percentages = calculatePercentages(maxExpense, (ArrayList)daily_expense_values, locations, days);
-        
-        Graph graph = new Graph();
-        graph.showGraph(maxExpense, days, month, year, (ArrayList)daily_expense_values, percentages);
+        GraphModelViewer ModelViewer = new GraphModelViewer();
+        ModelViewer.maxExpense = repository.calulateMaxMonthlyExpense(month, year);
+        ModelViewer.daily_expense_values = repository.calulateMonthlyExpenses(month, year);
+        ModelViewer.days = countDays(ModelViewer.daily_expense_values);
+        int[] locations = dayLocation(ModelViewer.daily_expense_values);
+        ModelViewer.percentages = calculatePercentages(ModelViewer.maxExpense, (ArrayList)ModelViewer.daily_expense_values, locations, ModelViewer.days);
+        ModelViewer.month = month;
+        ModelViewer.year = year;
+        return ModelViewer;
     }
     
     
