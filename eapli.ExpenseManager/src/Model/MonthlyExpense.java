@@ -62,7 +62,7 @@ public class MonthlyExpense {
     }
     
     public String toString() {
-        return "Year " + year + "\nMonth " + month + "\nExpense " + value;
+        return "Year " + year + "\nMonth " + month + "\nExpense " + value.intValue() + "€";
     }
     
     public BigDecimal getValue(){
