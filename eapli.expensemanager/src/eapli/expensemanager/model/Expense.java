@@ -16,7 +16,8 @@ import javax.persistence.Temporal;
 public class Expense extends Movement {
     @ManyToOne(cascade = CascadeType.MERGE)
     private ExpenseType expenseType;
-    @ManyToOne(cascade = CascadeType.PERSIST)
+//    @ManyToOne(cascade = CascadeType.PERSIST)
+    @ManyToOne
     private Payment payment;
     
     public Expense() {
