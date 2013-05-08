@@ -1,0 +1,60 @@
+05-08 14:04:28 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "CARD" not found; SQL statement:
+ALTER TABLE CARD DROP CONSTRAINT FK_CARD_ID [42102-171]
+05-08 14:04:28 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "CASH" not found; SQL statement:
+ALTER TABLE CASH DROP CONSTRAINT FK_CASH_ID [42102-171]
+05-08 14:04:28 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "CHEQUE" not found; SQL statement:
+ALTER TABLE CHEQUE DROP CONSTRAINT FK_CHEQUE_ID [42102-171]
+05-08 14:04:28 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "EXPENSE" not found; SQL statement:
+ALTER TABLE EXPENSE DROP CONSTRAINT FK_EXPENSE_EXPENSETYPE_DESCRIPTION [42102-171]
+05-08 14:04:28 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "EXPENSE" not found; SQL statement:
+ALTER TABLE EXPENSE DROP CONSTRAINT FK_EXPENSE_PAYMENT_ID [42102-171]
+05-08 14:04:28 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "INCOME" not found; SQL statement:
+ALTER TABLE INCOME DROP CONSTRAINT FK_INCOME_INCOMETYPE_DESCRIPTION [42102-171]
+05-08 14:04:28 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "PAYMENT" not found; SQL statement:
+ALTER TABLE PAYMENT DROP CONSTRAINT FK_PAYMENT_PAYMENTMEANS_ID [42102-171]
+05-08 14:04:28 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "CREDITCARD" not found; SQL statement:
+ALTER TABLE CREDITCARD DROP CONSTRAINT FK_CREDITCARD_ID [42102-171]
+05-08 14:04:28 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "DEBITCARD" not found; SQL statement:
+ALTER TABLE DEBITCARD DROP CONSTRAINT FK_DEBITCARD_ID [42102-171]
+05-08 14:04:28 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "PAYMENTMEANS" not found; SQL statement:
+DROP TABLE PAYMENTMEANS [42102-171]
+05-08 14:04:28 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "CARD" not found; SQL statement:
+DROP TABLE CARD [42102-171]
+05-08 14:04:28 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "CASH" not found; SQL statement:
+DROP TABLE CASH [42102-171]
+05-08 14:04:28 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "CHEQUE" not found; SQL statement:
+DROP TABLE CHEQUE [42102-171]
+05-08 14:04:28 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "EXPENSE" not found; SQL statement:
+DROP TABLE EXPENSE [42102-171]
+05-08 14:04:28 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "EXPENSETYPE" not found; SQL statement:
+DROP TABLE EXPENSETYPE [42102-171]
+05-08 14:04:28 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "INCOME" not found; SQL statement:
+DROP TABLE INCOME [42102-171]
+05-08 14:04:28 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "INCOMETYPE" not found; SQL statement:
+DROP TABLE INCOMETYPE [42102-171]
+05-08 14:04:28 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "PAYMENT" not found; SQL statement:
+DROP TABLE PAYMENT [42102-171]
+05-08 14:04:28 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "CREDITCARD" not found; SQL statement:
+DROP TABLE CREDITCARD [42102-171]
+05-08 14:04:28 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "DEBITCARD" not found; SQL statement:
+DROP TABLE DEBITCARD [42102-171]

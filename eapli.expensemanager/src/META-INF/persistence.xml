@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="eapli.expensemanagerPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>eapli.expensemanager.model.Card</class>
+    <class>eapli.expensemanager.model.Cash</class>
+    <class>eapli.expensemanager.model.Cheque</class>
+    <class>eapli.expensemanager.model.Expense</class>
+    <class>eapli.expensemanager.model.ExpenseType</class>
+    <class>eapli.expensemanager.model.Income</class>
+    <class>eapli.expensemanager.model.IncomeType</class>
+    <class>eapli.expensemanager.model.Movement</class>
+    <class>eapli.expensemanager.model.MovementType</class>
+    <class>eapli.expensemanager.model.Payment</class>
+    <class>eapli.expensemanager.model.PaymentMeans</class>
+    <class>eapli.expensemanager.model.CreditCard</class>
+    <class>eapli.expensemanager.model.DebitCard</class>
+    <class>eapli.expensemanager.model.ChequePayment</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:h2:./db/expensemanager"/>
+      <property name="javax.persistence.jdbc.password" value=""/>
+      <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+      <property name="javax.persistence.jdbc.user" value=""/>
+      <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
+    </properties>
+  </persistence-unit>
+</persistence>

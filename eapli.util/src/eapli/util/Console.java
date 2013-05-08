@@ -1,10 +1,12 @@
 /*
-* To change this template, choose Tools | Templates
-* and open the template in the editor.
-*/
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package eapli.util;
 
+import static eapli.util.Console.readLine;
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -14,11 +16,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
-*
-* @author Paulo Gandra Sousa
-*
-* based on code form Nuno Silva
-*/
+ *
+ * @author Paulo Gandra Sousa
+ * 
+ * based on code form Nuno Silva
+ */
 public class Console {
 
     static public String readLine(String prompt) {
@@ -65,18 +67,42 @@ public class Console {
         } while (true);
     }
 
-    static public Calendar readDate(String prompt) {
+    static public int readOption(int low, int high, int exit) {
+        int option;
+        do
+        {
+            option = Console.readInteger("Introduza opção: ");
+            if (option == exit)
+                break;
+        } while (option < low || option > high);
+        return option;
+    }
+    
+    static public Date readDate(String prompt) {
         do {
             try {
                 String strDate = readLine(prompt);
 
                 SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
 
-                Date d = df.parse(strDate);
-                
-                Calendar date=Calendar.getInstance();
-                   
-                date.setTime(d);
+                Date date = df.parse(strDate);
+
+                return date;
+            } catch (ParseException ex) {
+                Logger.getLogger(Console.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } while (true);
+    }
+
+    static public Calendar readCalendar(String prompt) {
+        do {
+            try {
+                String strDate = readLine(prompt);
+
+                SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+
+                Calendar date = DateTime.dateToCalendar(df.parse(strDate));
+
                 return date;
             } catch (ParseException ex) {
                 Logger.getLogger(Console.class.getName()).log(Level.SEVERE, null, ex);
@@ -96,5 +122,14 @@ public class Console {
                 Logger.getLogger(Console.class.getName()).log(Level.SEVERE, null, ex);
             }
         } while (true);
+    }
+
+    public static void waitForKey(String prompt) {
+        System.out.println(prompt);
+        try {
+        System.in.read();
+        } catch(IOException ex) {
+                Logger.getLogger(Console.class.getName()).log(Level.SEVERE, null, ex);            
+        }
     }
 }
