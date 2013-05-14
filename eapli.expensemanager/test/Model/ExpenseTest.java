@@ -4,6 +4,9 @@
  */
 package Model;
 
+import eapli.expensemanager.model.Expense;
+import eapli.expensemanager.model.ExpenseType;
+import eapli.expensemanager.model.Payment;
 import eapli.util.DateTime;
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
@@ -22,16 +25,24 @@ import static org.junit.Assert.*;
  */
 public class ExpenseTest {
         private Expense ex;
+        private String type;
         
     public ExpenseTest() {
-        ex = new Expense(new ExpenseType("Autocarro"), 2013, 12, 22, new BigDecimal(2.4));
+        type = "Autocarro";
+        ex = new Expense(new ExpenseType(type), "Viagem de autocarro, Porto - Lisboa",
+                new Date(2013, 12, 22), new BigDecimal(2.4), new Payment());
     }
     
     @Test
-    public void testGetDate() {
-        SimpleDateFormat sdf1= new SimpleDateFormat("dd/MM/yyyy");
-        Calendar date = ex.getDate();
-        assertEquals("22/12/2013", sdf1.format(date));
+    public void testGetDescription() {
+        assertEquals("Viagem de autocarro", ex.getDescription());
+    }
+    
+    @Test
+    public void testGetExpenseType() {
+        ExpenseType result = ex.getExpenseType();
+        assertNotNull("Null RESUT var", result);
+        assertEquals("Expense Type: " + type, result.toString());
     }
 }
 

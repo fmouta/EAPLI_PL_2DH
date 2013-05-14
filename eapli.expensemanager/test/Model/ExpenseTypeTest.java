@@ -4,6 +4,7 @@
  */
 package Model;
 
+import eapli.expensemanager.model.ExpenseType;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -26,8 +27,8 @@ public class ExpenseTypeTest {
         
         System.out.println("getDescription");
         ExpenseType instance = new ExpenseType(description);
-        String result = instance.getDescription();
+        String result = instance.toString();
         assertNotNull("Null RESUT var", result);
-        assertEquals(description, result);
+        assertEquals(("Expense Type: "  + description), result);
     }
 }
