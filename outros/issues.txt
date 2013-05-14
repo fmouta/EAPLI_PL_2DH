@@ -1,0 +1,33 @@
+#01  Criar Modelo de Dominio
+#02  Criar Projeto base
+#03  Menu
+#04  UC 03-A: Registar despesa (simplificado)
+#05  UC 01-A: Registar tipo de despesa (definição de tipo de despesa)
+#06  UC 01-B: "bootstrap" com tipos de despesas: “refeições”, “vestuário”, “transportes”, “lazer"
+#07  UC 03-B: Registar despesa com tipo de despesa SEM atualização de saldo
+#08  UC 04: Visualização de gasto desta semana 
+#09  UC 05: Visualização de gasto deste mês
+#10  UC 06-A: Consulta de todos os gastos mensais SEM agregação por tipo de despesa
+#11  UC 06-B: Consulta de todos os gastos mensais COM agregação por tipo de despesa
+#12  UC 07: Consulta de gastos mensais em formato “gráfico” através de um gráfico de barras
+
+#13  UC 02-A: Definição de meio de pagamento - dinheiro
+#14  UC 02-B: Definição de meios de pagamento - cartão débito, cartão crédito, cheque 
+#15  UC 03-C: Registar despesa com pagamento em dinheiro 
+#16  UC 03-D: Registar despesa com pagamento por cartão débito/crédito 
+#17  UC 03-E: Registar despesa com pagamento por cheque
+
+#18  UC 08-A: Registar tipo de rendimento (definição de tipo de rendimento)
+#19  UC 08-B: "bootstrap" com tipos de rendimentos: “salário”, “mesada”, “prestação de serviços”
+#20  UC 09-A : Registar entrada de rendimento SEM atualização de saldo
+
+
+
+
+
+
+
+ 
+
+
+  

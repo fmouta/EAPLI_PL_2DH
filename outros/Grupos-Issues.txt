@@ -1,0 +1,33 @@
+Grupo 1:
+	1081344	José Faneco	1081344JoseFaneco		#15
+	1091330	Hugo Santos	1091330hugosantos		#16
+	1091436	João Martins	1091436JoaoMartins		#17
+Grupo 2:
+	1090570	Fernando Nunes	1090570FernandoNunes	#6
+	1091325	Diogo Martins	1091325DiogoMartins	#5
+Grupo 3:
+	1111314	Paulo Oliveira	pajo1471			#13
+	1111407	Elton Morais	eltonmorais10		#14
+Grupo 4:
+	1110738	Miguel Fontes	1110738MiguelFontes	#20
+	1111623	Mário Garrido	skinie18			#7
+Grupo 5:
+	1080920	Alberto Azevedo	1080920AlbertoAzevedo	#12
+	1110710	Carlos Tavares	1110710CarlosTavares
+Grupo 6:
+	1110422	Paulo Rodrigues	1110422-PauloRodrigues	#18
+	1111305	António Silva	1111305-AntonioSilva
+Grupo 7:
+	1101478	Duarte Carvalho	1101478DuartedeCarvalho	#10
+	1110852	José Sousa		1110852-JoseSousa		#11
+Grupo 8:
+	1080453	Diogo Ribeiro	1080453-Diogo-Ribeiro	#8
+	1100571	Diogo Lima	Diogo1100571		#9
+	1110795	Fábio Antunes	1110795-Fabio-Antunes
+Grupo 9:
+	1090555	Diogo Soares	1090555DiogoSoares		#19
+	1111111	Tiago Martins	tiagoisep			#3
+ 
+
+				
+				

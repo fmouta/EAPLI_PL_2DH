@@ -1,0 +1,99 @@
+Grupo 1:
+
+1081344	José Faneco	#17 - Registar despesa com tipo de despesa e pagamento por cheque
+	Diagrama de sequência: 	DS_RegistarDespesaPagPorCheque_1081344
+	Diagrama de classes: 		DC_RegistarDespesaPagPorCheque_1081344
+
+1091330	Hugo Santos	#16 - Registar despesa com tipo de despesa e pagamento por cartão débito/crédito
+	Diagrama de sequência: 	DS_RegistarDespesaPagPorCartaoDdbCred_1091330
+	Diagrama de classes: 		DC_RegistarDespesaPagPorCartaoDdbCred_1091330
+
+1091436	João Martins	#15 - Registar despesa com tipo de despesa e pagamento em dinheiro
+	Diagrama de sequência: 	DS_RegistarDespesaPagDinheiro_1091436
+	Diagrama de classes: 		DC_RegistarDespesaPagDinheiro_1091436
+
+
+Grupo 2:
+
+1090570	Fernando Nunes	#6 - "bootstrap" com tipos de despesas: “refeições”, “vestuário”, “transportes”, “lazer"
+	Diagrama de sequência: 	DS_BootstrapComTiposDeDespesas_1090570
+	Diagrama de classes: 		DC_BootstrapComTiposDeDespesas_1090570
+
+1091325	Diogo Martins	#5 - Registar tipo de despesa
+	Diagrama de sequência: 	DS_RegistarTipoDeDespesa_1091325
+	Diagrama de classes: 		DC_RegistarTipoDeDespesa_1091325
+
+
+Grupo 3:
+
+1111314	Paulo Oliveira	#13 - Registar meio de pagamento cash, cheque
+	Diagrama de sequência: 	DS_RegistarMeioDePagDinheiroCheque_1111314
+	Diagrama de classes: 		DC_RegistarMeioDePagDinheiroCheque_1111314
+
+1111407	Elton Morais	#14 - Registar meio de pagamento cartão débito, cartão crédito
+	Diagrama de sequência: 	DS_RegistarMeioDePagCartaoDebCred_1111407
+	Diagrama de classes: 		DC_RegistarMeioDePagCartaoDebCred_1111407
+
+
+Grupo 4:
+
+1110738	Miguel Fontes	#20 - Registar Rendimento com tipo de rendimento
+	Diagrama de sequência: 	DS_RegistarRendimentoComTipoRendimento_1110738
+
+1111623	Mário Garrido	(#7) - Registar Rendimento com tipo de rendimento 
+	Diagrama de classes: 		DC_RegistarRendimentoComTipoRendimento_1111623
+
+
+Grupo 5:
+
+1080920	Alberto Azevedo	#12 - Consulta de gastos mensais em formato “gráfico” através de um gráfico de barras
+	Diagrama de sequência: 	DS_ConsultaGastosMensaisFormatoGrafico_1080920
+	Diagrama de classes: 		DC_ConsultaGastosMensaisFormatoGrafico_1080920
+
+1110710	Carlos Tavares	- Persistência Inmemory/JPA  (Factory/Singleton/Strategy)
+	Diagrama de sequência: 	DS_PersistenciaInmemoryJPA_1110710
+	Diagrama de classes: 		DC_PersistenciaInmemoryJPA_1110710
+
+
+Grupo 6:
+
+1110422	Paulo Rodrigues	#18 - Registar tipo de rendimento
+	Diagrama de sequência: 	DS_RegistarTipoRendimento_1110422
+
+1111305	António Silva	(#18) - Registar tipo de rendimento
+	Diagrama de classes: 		DC_RegistarTipoRendimento_1111305
+
+
+Grupo 7:
+
+1101478	Duarte Carvalho	(#10) - Consulta de todos os gastos mensais COM agregação por tipo de despesa
+	Diagrama de sequência: 	DS_ConsultaGastosMensaisPorTipoDespesa_1101478
+
+1110852	José Sousa		#11 - Consulta de todos os gastos mensais COM agregação por tipo de despesa
+	Diagrama de classes: 		DC_ConsultaGastosMensaisPorTipoDespesa_1110852
+
+
+Grupo 8:
+
+1080453	Diogo Ribeiro	#8 - Visualização de gasto desta semana
+	Diagrama de sequência: 	DS_VisualizacaoGastoDestaSemana_1080453
+	Diagrama de classes: 		DC_VisualizacaoGastoDestaSemana_1080453
+
+1100571	Diogo Lima	#9 - Visualização de gasto deste mês
+	Diagrama de sequência: 	DS_VisualizacaoGastoDesteMes_1100571
+
+1110795	Fábio Antunes	(#9) - Visualização de gasto deste mês
+	Diagrama de classes: 		DC_VisualizacaoGastoDesteMes_1110795
+
+
+Grupo 9:
+
+1090555	Diogo Soares	#19 - Bootstrap com tipos de rendimentos: “salário”, “mesada”, “prestação de serviços”
+	Diagrama de sequência: 	DS_BootstrapComTiposDeRendimentos_1090555
+
+
+1111111	Tiago Martins	(#3) - Bootstrap com tipos de rendimentos: “salário”, “mesada”, “prestação de serviços”
+ 	Diagrama de classes: 		DC_BootstrapComTiposDeRendimentos_1111111
+
+				
+				

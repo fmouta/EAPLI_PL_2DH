@@ -1,0 +1,15 @@
+Requisitos Mínimos:
+
+1 - Testes Unitários
+2 - Persistência Inmemory/JPA  (Factory/Singleton/Strategy)
+3 - Add/List ExpenseType & IncomeType
+4 - Add/List PaymentMeans
+5 - Register Expense with:
+	ExpenseType,
+	PaymentMeans: cash, debitCard, creditCard (Polymorphism)
+6 - Total week expenditure, total month expenditure (Information Expert)
+7 - List expenses
+8 - List expenses grouped by expense type
+9 - Register Income with income type
+10 - List incomes
+11 - Show balance
