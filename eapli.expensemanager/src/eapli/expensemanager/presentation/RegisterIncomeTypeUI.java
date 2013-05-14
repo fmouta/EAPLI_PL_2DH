@@ -24,7 +24,7 @@ class RegisterIncomeTypeUI  extends BaseUI {
 
     public void run() {
         System.out.println("* * *  REGISTER AN INCOME TYPE  * * *\n");
-        String descr = Console.readLine("Description:");
+        String descr = Console.readLine("Description: ");
         controller.registerIncomeType(descr);
         System.out.println("\nIncome type recorded!");      
     }    

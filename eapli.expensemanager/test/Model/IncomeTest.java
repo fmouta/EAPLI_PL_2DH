@@ -4,6 +4,8 @@
  */
 package Model;
 
+import eapli.expensemanager.model.Income;
+import eapli.expensemanager.model.IncomeType;
 import eapli.util.DateTime;
 import java.math.BigDecimal;
 import java.util.Calendar;

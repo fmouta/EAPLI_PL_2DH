@@ -15,26 +15,21 @@ import java.math.BigDecimal;
  */
 public class IncomeTypeBootstrapper {
 
-    static {
-        
+    static 
+    {
         // IncomeType
         IIncomeTypeRepository repo = PersistenceFactory.
                 buildPersistenceFactory().incomeTypeRepository();
         IncomeType salario = new IncomeType("Salário");
         IncomeType mesada = new IncomeType("Mesada");
         IncomeType servicos = new IncomeType("Prestação de Serviços");
-        repo.save(new IncomeType("Salário"));
-        repo.save(new IncomeType("Mesada"));
-        repo.save(new IncomeType("Prestação de Serviços"));
+        repo.save(salario);
+        repo.save(mesada);
+        repo.save(servicos);
 
         // Income
-        IIncomeRepository repo2 = PersistenceFactory.
-                buildPersistenceFactory().incomeRepository();
-        Income salario1 = new Income("Vencimento Março 2013",
-                DateTime.newDate(2013, 3, 1), new BigDecimal(200), salario);
+        IIncomeRepository repo2 = PersistenceFactory.buildPersistenceFactory().incomeRepository();
+        Income salario1 = new Income("Vencimento Março 2013",DateTime.newDate(2013, 3, 1), new BigDecimal(200), salario);
         repo2.save(salario1); 
-
         }
-    
-    
 }
