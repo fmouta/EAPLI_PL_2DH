@@ -30,6 +30,7 @@ public class MainMenu {
             System.out.println("8. List payment means");
             System.out.println("9. Register income type");
             System.out.println("10. List income types");
+            System.out.println("11. Show Balance");
             System.out.println("0. Exit\n\n");
 
             option = Console.readInteger("Please choose a option");
@@ -76,7 +77,11 @@ public class MainMenu {
                 case 10:
                     ListIncomeTypesUI listIncomeTypesUI = new ListIncomeTypesUI();
                     listIncomeTypesUI.mainLoop();
-                    break;                
+                    break;
+                case 11:
+                    ShowBalanceUI showBalanceUI = new ShowBalanceUI();
+                    showBalanceUI.mainLoop();
+                    break; 
                 default:
                     System.out.println("Invalid Option\nPlease try again");
             }
