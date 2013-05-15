@@ -1,8 +1,10 @@
 
 package eapli.expensemanager.model;
 
+import eapli.util.DateTime;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Calendar;
 import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -47,12 +49,25 @@ public abstract class Movement implements Serializable {
         return description;
     }
     
+    public Date getDate() {
+        return dateOcurred;
+    }    
+    
     public BigDecimal getAmount() {
         return amount;
     }
 
     @Override
     public String toString() {
-        return " Id=" + id + " description=" + description + " amount=" + amount;
-    }    
+        return " Id=" + id + " description=" + description 
+                + " date=" + dateOcurredToString() + " amount=" + amount;
+    }  
+    
+    private String dateOcurredToString() {
+        return DateTime.dateToCalendar(dateOcurred).get(Calendar.DAY_OF_MONTH)
+                + "/"
+                + DateTime.dateToCalendar(dateOcurred).get(Calendar.MONTH)
+                + "/"
+                + DateTime.dateToCalendar(dateOcurred).get(Calendar.YEAR);
+    }
 }

@@ -50,7 +50,7 @@ public class ExpensesBootstrapper {
         IExpenseRepository repo3 = PersistenceFactory.
                 buildPersistenceFactory().expenseRepository();     
         Expense exp = new Expense(vestuario, "Sapatilhas",
-                DateTime.newDate(2013, 4, 5), new BigDecimal(150),
+                DateTime.newDate(2013, 5, 14), new BigDecimal(150),
                 new Payment(pCreditCard));
         repo3.save(exp);
         exp = new Expense(vestuario, "T-shirt", DateTime.newDate(2013, 4, 1),
