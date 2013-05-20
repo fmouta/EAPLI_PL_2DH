@@ -8,10 +8,14 @@ package eapli.expensemanager.persistence.inmemory;
 
 import eapli.expensemanager.model.Expense;
 import eapli.expensemanager.persistence.IExpenseRepository;
+import eapli.util.DateTime;
 import java.math.BigDecimal;
+import java.math.MathContext;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 
@@ -78,17 +82,16 @@ public class ExpenseRepositoryImpl  implements IExpenseRepository
 //        BigDecimal total=new BigDecimal(0);
 //        for (int i = 0; i < listExpense.size(); i++) {
 //            Expense despesa=listExpense.get(i);
-//            Date dateDespense=despesa.getDate().getTime();
+//            Date dateDespense=despesa.getDate();
 //            
 //            if(dateDespense.after(firstDayOfTheWeek)){
 //                System.out.println("Expense: "+despesa.getDescription()+" \nValue: "+despesa.getAmount()+"€\nDate: "+despesa.getDate()+"\n");
-//                total=total.add(despesa.getAmount());
-//            
+//                total=total.add(despesa.getAmount());      
 //            }
 //        }
 //      return total; 
 //    }
-
+//
 //    public BigDecimal getTotalMonth()
 //    {
 //        Calendar cal = Calendar.getInstance();
@@ -98,7 +101,7 @@ public class ExpenseRepositoryImpl  implements IExpenseRepository
 //        BigDecimal total=new BigDecimal(0);
 //        for (int i = 0; i < listExpense.size(); i++) {
 //            Expense despesa=listExpense.get(i);
-//            Date dateDespense=despesa.getDate().getTime();
+//            Date dateDespense=despesa.getDate();
 //
 //        if(dateDespense.after(firstDayOfTheMonth)){
 //                 System.out.println("Expense: "+despesa.getDescription()+" \nValue: "+despesa.getAmount().round(new MathContext(2))+"€\nDate: "+despesa.getDate()+"\n");
@@ -144,41 +147,44 @@ public class ExpenseRepositoryImpl  implements IExpenseRepository
 //        return daily_expense_values;
 //    }
     
-//    public BigDecimal getThisWeekExpenditure() {
-//        int weekNumber = DateTime.weekNumber(DateTime.today());
-//        BigDecimal expenditure = new BigDecimal(0);
-//        for (Expense exp: listExpense) {
-//            if (weekNumber == DateTime.weekNumber(exp.getDate()))
-//                expenditure = expenditure.add(exp.getAmount());
-//        }
-//        return expenditure;
-//    }
-        
-//    public BigDecimal getThisMonthExpenditure() {
-//        int year = DateTime.currentYear();
-//        int month = DateTime.currentMonth();
-//        BigDecimal expenditure = new BigDecimal(0);
-//        for (Expense exp : listExpense) {
-//            if ( year == exp.getDate().get(Calendar.YEAR)
-//                    && month == (exp.getDate().get(Calendar.MONTH) + 1)) {
-//                expenditure = expenditure.add(exp.getAmount());
-//            }
-//        }
-//        return expenditure;
-//    }
-
     @Override
     public BigDecimal getThisWeekExpenditure() {
-                return new BigDecimal(0);
-// To change body of generated methods, choose Tools | Templates.
-//       throw new UnsupportedOperationException("Not supported yet.");
+        int weekNumber = DateTime.weekNumber(DateTime.today());
+        BigDecimal expenditure = new BigDecimal(0);
+        for (Expense exp: listExpense) {
+            if (weekNumber == DateTime.weekNumber(exp.getDate()))
+                expenditure = expenditure.add(exp.getAmount());
+        }
+        return expenditure;
     }
-
+        
     @Override
     public BigDecimal getThisMonthExpenditure() {
-                return new BigDecimal(0);
-// To change body of generated methods, choose Tools | Templates.
-//       throw new UnsupportedOperationException("Not supported yet.");
+        int year = DateTime.currentYear();
+        int month = DateTime.currentMonth();
+        BigDecimal expenditure = new BigDecimal(0);
+        for (Expense exp : listExpense) {
+            if ( year == exp.getDate().getYear()
+                    && month == (exp.getDate().getMonth() + 1)) {
+                expenditure = expenditure.add(exp.getAmount());
+            }
+        }
+        return expenditure;
     }
+
+
+//    @Override
+//    public BigDecimal getThisWeekExpenditure() {
+//                return new BigDecimal(0);
+//// To change body of generated methods, choose Tools | Templates.
+////       throw new UnsupportedOperationException("Not supported yet.");
+//    }
+
+//    @Override
+//    public BigDecimal getThisMonthExpenditure() {
+//                return new BigDecimal(0);
+//// To change body of generated methods, choose Tools | Templates.
+////       throw new UnsupportedOperationException("Not supported yet.");
+//    }
 
 }
