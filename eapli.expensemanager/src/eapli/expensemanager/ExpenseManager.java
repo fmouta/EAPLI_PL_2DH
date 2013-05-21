@@ -2,6 +2,7 @@ package eapli.expensemanager;
 
 import eapli.expensemanager.bootstrap.ExpensesBootstrapper;
 import eapli.expensemanager.bootstrap.IncomeTypeBootstrapper;
+import eapli.expensemanager.bootstrap.PaymentBootstrapper;
 import eapli.expensemanager.presentation.MainMenu;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -31,6 +32,7 @@ public class ExpenseManager {
     private static void doBootstrap() {
         new ExpensesBootstrapper();
         new IncomeTypeBootstrapper();
+        new PaymentBootstrapper(); // Adicionado
     }
     
     public static void main(String[] args) {

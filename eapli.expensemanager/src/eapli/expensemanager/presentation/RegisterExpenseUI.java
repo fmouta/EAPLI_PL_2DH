@@ -66,5 +66,27 @@ class RegisterExpenseUI  extends BaseUI {
         PaymentMeans paymentMeans = listPaymentMeans.get(option-1);
         return paymentMeans;
     }
+     /**
+     *
+     * @author 1081344, 1091330 , 1091436 
+     */
+    // Alternativa
+    private PaymentMeans readPaymentMeans2() {
+
+        List<PaymentMeans> listp = controller.getPaymentMeans();
+        int optionp;
+        do {
+            System.out.println("===================");
+            System.out.println(" Choose PaymentType ");
+            System.out.println("===================\n");
+            for (int i = 0; i < listp.size(); i++) {
+                System.out.println((i + 1) + ":" + listp.get(i).toString());
+            }
+            optionp = Console.readInteger("Please choose a option");
+        } while (optionp > listp.size() || optionp < 1);
+        PaymentMeans paymentMeans = listp.get(optionp - 1);
+        return paymentMeans;
+
+    }
     
 }
