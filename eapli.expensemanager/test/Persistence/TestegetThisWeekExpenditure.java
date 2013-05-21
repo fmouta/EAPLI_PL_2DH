@@ -28,7 +28,7 @@ public class TestegetThisWeekExpenditure {
         System.out.println("getTotalWeek");
         ExpenseRepositoryImpl instance = new ExpenseRepositoryImpl();
         BigDecimal expResult = new BigDecimal(15);
-        BigDecimal result = instance.getThisWeekExpenditure().round(new MathContext(2));
+        BigDecimal result = instance.getThisWeekExpenditure();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         

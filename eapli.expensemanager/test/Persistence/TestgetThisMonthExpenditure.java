@@ -28,7 +28,7 @@ public class TestgetThisMonthExpenditure {
         System.out.println("getTotalMonth");
         ExpenseRepositoryImpl instance = new ExpenseRepositoryImpl();
         BigDecimal expResult = new BigDecimal(0);
-        BigDecimal result = instance.getThisMonthExpenditure().round(new MathContext(2));
+        BigDecimal result = instance.getThisMonthExpenditure();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         
