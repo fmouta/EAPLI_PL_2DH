@@ -1,0 +1,33 @@
+Grupo 1:
+	1081344	José Faneco
+	1091330	Hugo Santos
+	1091436	João Martins
+Grupo 2:
+	1090570	Fernando Nunes
+	1091325	Diogo Martins
+Grupo 3:
+	1111314	Paulo Oliveira
+	1111407	Elton Morais
+Grupo 4:
+	1110738	Miguel Fontes
+	1111623	Mário Garrido
+Grupo 5:
+	1080920	Alberto Azevedo
+	1110710	Carlos Tavares
+Grupo 6:
+	1110422	Paulo Rodrigres
+	1111305	António Silva
+Grupo 7:
+	1101478	Duarte Carvalho
+	1110852	José Sousa
+Grupo 8:
+	1080453	Diogo Ribeiro
+	1100571	Diogo Lima
+	1110795	Fábio Antunes
+Grupo 9:
+	1090555	Diogo Soares
+	1111111	Tiago Martins
+ 
+
+
+  
