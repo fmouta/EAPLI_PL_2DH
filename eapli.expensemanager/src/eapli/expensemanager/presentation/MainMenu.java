@@ -31,6 +31,8 @@ public class MainMenu {
             System.out.println("9. Register income type");
             System.out.println("10. List income types");
             System.out.println("11. Show Balance");
+            System.out.println("12. Register an income");
+            System.out.println("13. Show all incomes");
             System.out.println("0. Exit\n\n");
 
             option = Console.readInteger("Please choose a option");
@@ -58,22 +60,22 @@ public class MainMenu {
                     AllMonthlyExpensesTypeUI ui5 = new AllMonthlyExpensesTypeUI();
                     ui5.mainLoop();
                     break;
-                 case 6:
+                case 6:
                     ExpensesValueUI ui6 = new ExpensesValueUI();
                     ui6.mainLoop();
                     break;
-                 case 7:
+                case 7:
                     ListExpenseTypesUI listExpensesTypesUI = new ListExpenseTypesUI();
                     listExpensesTypesUI.mainLoop();
                     break;
-                 case 8:
+                case 8:
                     ListPaymentMeansUI listPaymentMeansUI = new ListPaymentMeansUI();
                     listPaymentMeansUI.mainLoop();
                     break;
-                 case 9:
+                case 9:
                     RegisterIncomeTypeUI ui7 = new RegisterIncomeTypeUI();
                     ui7.mainLoop();
-                    break;                 
+                    break;
                 case 10:
                     ListIncomeTypesUI listIncomeTypesUI = new ListIncomeTypesUI();
                     listIncomeTypesUI.mainLoop();
@@ -81,7 +83,14 @@ public class MainMenu {
                 case 11:
                     ShowBalanceUI showBalanceUI = new ShowBalanceUI();
                     showBalanceUI.mainLoop();
-                    break; 
+                    break;
+                case 12:
+                    RegisterIncomeUI ui8 = new RegisterIncomeUI();
+                    ui8.mainLoop();
+                    break;
+                case 13:
+                    ListIncomesUI ui9 = new ListIncomesUI();
+                    ui9.mainLoop();
                 default:
                     System.out.println("Invalid Option\nPlease try again");
             }
